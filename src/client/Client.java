@@ -21,6 +21,11 @@ public class Client {
 		connectionOpened = false;
 	}
 	
+	public void setServer(String host, int port){
+		serverName = host;
+		serverPort = port;
+	}
+	
 	public void open(){
 		try {
 			socket = new Socket(serverName, serverPort);
@@ -57,9 +62,6 @@ public class Client {
 	public void close(){
 		sendMessage("bye");
 		connectionOpened = false;
-		
-		
-		
 	}
 	
 	private void sendMessage(String message){
