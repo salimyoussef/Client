@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 import client.Client;
-import client.ProtocolClient;
+import client.Protocol;
 import exceptions.ConnectionNotOpenedException;
 
 public class Main {
@@ -11,7 +11,7 @@ public class Main {
 		Scanner s = new Scanner(System.in);
 		String req;
 		String resp = "e";
-		ProtocolClient pc = new ProtocolClient();
+		Protocol pc = new Protocol();
 		LinkedList<String> parametres = new LinkedList<>();
 
 		do {
