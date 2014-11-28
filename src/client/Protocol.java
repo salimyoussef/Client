@@ -2,7 +2,7 @@ package client;
 
 import java.util.LinkedList;
 
-public class ProtocolClient {
+public class Protocol {
 	
 	
 	public String message(String type, LinkedList<String> parametres){
