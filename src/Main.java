@@ -2,7 +2,9 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 import client.Client;
-import client.Protocol;
+import client.Control;
+import client.*;
+
 import exceptions.ConnectionNotOpenedException;
 
 public class Main {
@@ -12,7 +14,8 @@ public class Main {
 		Scanner s = new Scanner(System.in);
 		String req;
 		String resp = "e";
-		Protocol pc = new Protocol();
+		Protocol pc = new ProtocoleClient();
+		Control ctrl = new Control();
 		LinkedList<String> parametres = new LinkedList<>();
 
 		do {
@@ -27,7 +30,7 @@ public class Main {
 					// client.setServer("10.212.102.245", 5000);
 					client.open();
 					resp = client.send(req);
-					System.out.println(resp);
+					ctrl.execute(resp);
 					client.close();
 				}
 				if (req.equals("enregistrer")) {
@@ -39,7 +42,7 @@ public class Main {
 					// client.setServer("10.212.102.245", 5000);
 					client.open();
 					resp = client.send(req);
-					System.out.println(resp);
+					ctrl.execute(resp);
 					client.close();
 				}
 			} catch (ConnectionNotOpenedException e) {

@@ -7,7 +7,7 @@ public class ProtocoleClient extends Protocol {
 	@Override
 	public String message(String type, LinkedList<String> parametres){
 		String message;
-		message = type;
+		message = ""+type;
 		for(String param : parametres){
 				message = message + " ";
 			message = message+param;
