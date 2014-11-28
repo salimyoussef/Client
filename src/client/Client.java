@@ -62,9 +62,6 @@ public class Client {
 	public void close(){
 		sendMessage("bye");
 		connectionOpened = false;
-		
-		
-		
 	}
 	
 	private void sendMessage(String message){

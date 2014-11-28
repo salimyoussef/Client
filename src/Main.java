@@ -7,8 +7,7 @@ import exceptions.ConnectionNotOpenedException;
 public class Main {
 	
 	public static void main(String[] args) {
-		Client client = new Client();
-		
+		Client client = new Client();		
 
 		Scanner in = new Scanner(System.in);
 		
@@ -30,11 +29,10 @@ public class Main {
 					String nom = in.next();
 					String surnom = in.next();
 					req = req + " " +  nom + " " + surnom;
-					res  = client.send(req);				
+					res  = client.send(req);
 					System.out.println(res);
 				}				
 			}
-			
 			
 		} catch (ConnectionNotOpenedException e) {
 			// TODO Auto-generated catch block
@@ -43,7 +41,7 @@ public class Main {
 		
 		
 		
-		client.close();
+		
 		
 		
 	}
