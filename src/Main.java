@@ -6,6 +6,7 @@ import client.Protocol;
 import exceptions.ConnectionNotOpenedException;
 
 public class Main {
+	
 	public static void main(String[] args) {
 		Client client = new Client();
 		Scanner s = new Scanner(System.in);
@@ -43,9 +44,9 @@ public class Main {
 				}
 			} catch (ConnectionNotOpenedException e) {
 				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 		} while (!resp.equals("bye"));
-
 	}
 }
